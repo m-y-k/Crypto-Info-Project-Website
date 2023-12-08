@@ -1,0 +1,146 @@
+.grid-container
+{
+    background-color: var(--wrapperColor);
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--wrapperColor);
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline: 0.5rem;
+ 
+    
+}
+.grid-container:hover
+{
+    transition: scale 0.3s ease;
+    scale: 1.05;
+    border-color: var(--green);
+    
+}
+.grid-container-red:hover
+{
+    transition: scale 0.3s ease;
+    scale: 1.05;
+    border-color: var(--red);
+    
+}
+.coin-info
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin:  1.5rem;
+}
+.coin-info-container
+{
+    display: flex;
+    gap: 1rem;
+}
+.coin-logo
+{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.coin-basic
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.coin-symbol
+{
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.coin-name
+{
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--grey);
+    font-size: 1;
+    font-weight: light;
+}
+.chip-flex
+{
+    margin-inline: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.price-chip
+{
+    color: var(--green);
+    border-radius: 2rem;
+    border: 2px solid var(--green);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.35rem 1rem;
+
+}
+.price-chip:hover
+{
+    color: var(--white);
+   background-color: var(--green);
+   transition: all 0.3s ease;
+
+}
+.trend-chip
+{
+    color: var(--green);
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+   
+   height: 2.5rem;
+   width: 2.5rem;
+   padding: 0.35rem;
+   
+   
+ 
+}
+.trend-chip:hover
+{
+    color: var(--white);
+    background-color: var(--green);
+    transition: all 0.3s ease;
+}
+.red-chip
+{
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+.red-chip:hover
+{
+   background-color: var(--red);
+   color: var(--white);
+   transition: all 0.3s ease;
+}
+
+.price-container
+{
+    margin-inline:1.5rem;
+}
+.current-price
+{
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.total-volume,.market-cap
+{
+    color: var(--grey);
+    font-size: 0.8rem;
+}

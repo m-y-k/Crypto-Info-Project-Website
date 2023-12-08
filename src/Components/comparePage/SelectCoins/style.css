@@ -1,0 +1,36 @@
+.compare-select-coin-container
+{
+
+   
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  
+    
+}
+.compare-coin-select-box
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.select-coin-text
+{
+    
+    font-weight: 600;
+    color: var(--white);
+}
+
+@media only screen and (max-width:800px)
+{
+    .select-coin-text
+{
+    
+    
+    font-size: 0.8rem;
+    margin: 0px;
+    justify-content: flex-start;
+}
+
+
+}

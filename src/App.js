@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Footer from "./Components/common/Footer/Footer";
+import Header from "./Components/common/Header/Header";
+import MainComponent from "./Components/landingPages/MainComponent";
+import Home from "./Pages/Home";
+import Dashboard from "./Pages/Dashboard";
+import CoinPage from "./Pages/CoinInfoPage";
+import Compare from "./Pages/Compare";
+import WatchList from "./Pages/WatchList";
+import WatchListProvider from "./context/watchListProvider";
+import DarkThemeContextProvider from "./context/darkThemeContextProvider";
+import { ToastContainer } from "react-toastify";
+import ErrorPage from "./Components/common/error/Error";
+
 
 function App() {
+
+  
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DarkThemeContextProvider>
+      <WatchListProvider>
+        <div className="app">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/coin/:id" element={<CoinPage />} />
+              <Route path="/compare" element={<Compare />} />
+              <Route path="/watchlist" element={<WatchList />} />
+              <Route path="/error" element={<ErrorPage />} />
+            </Routes>
+            <ToastContainer/>
+          </BrowserRouter>
+        </div>
+      </WatchListProvider>
+    </DarkThemeContextProvider>
   );
 }
 

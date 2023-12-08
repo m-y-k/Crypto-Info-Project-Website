@@ -1,0 +1,10 @@
+.css-10ys79h-MuiButtonBase-root-MuiCheckbox-root {
+  scale: 2;
+  color: var(--blue);
+}
+
+@media only screen and (max-width:800px) {
+  .css-10ys79h-MuiButtonBase-root-MuiCheckbox-root {
+    scale: 1;
+  }
+}
